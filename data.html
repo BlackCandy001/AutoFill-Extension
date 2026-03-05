@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Black Candy - Quản lý dữ liệu AutoFill</title>
+    <link rel="stylesheet" href="data.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-title">
+                <span class="icon">🍫</span>
+                <h1>Black Candy AutoFill</h1>
+            </div>
+            <p>Quản lý dữ liệu đã lưu</p>
+        </header>
+
+        <main>
+            <div class="controls">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm theo domain hoặc key...">
+                <button id="refreshBtn" class="btn-primary">Làm mới</button>
+            </div>
+
+            <div class="table-container">
+                <table id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>Website (Domain)</th>
+                            <th>Trường (Key/ID)</th>
+                            <th>Giá trị đã lưu</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dataBody">
+                        <!-- Dữ liệu sẽ được render ở đây -->
+                    </tbody>
+                </table>
+                <div id="noDataMessage" class="hidden">Chưa có dữ liệu nào được lưu.</div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal sửa dữ liệu -->
+    <div id="editModal" class="modal hidden">
+        <div class="modal-content">
+            <h3>Sửa dữ liệu</h3>
+            <div class="form-group">
+                <label>Key:</label>
+                <input type="text" id="editKey" readonly class="readonly-input">
+            </div>
+            <div class="form-group">
+                <label>Giá trị mới:</label>
+                <input type="text" id="editValue">
+            </div>
+            <div class="modal-actions">
+                <button id="cancelEdit" class="btn-secondary">Hủy</button>
+                <button id="saveEdit" class="btn-primary">Lưu thay đổi</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+</body>
+</html>

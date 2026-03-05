@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo-area">
+          <span class="icon">📝</span>
+          <h1>AutoFill</h1>
+        </div>
+        <p class="subtitle">Tự động điền form thông minh</p>
+      </header>
+
+      <main>
+        <div class="status-card">
+          <div class="label">
+            <span class="status-text"
+              >Trạng thái: <strong id="statusLabel">Bật</strong></span
+            >
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="toggleExtension" checked />
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <div class="stats">
+          <div class="stat-item">
+            <span class="val" id="dataCount">0</span>
+            <span class="desc">Trường đã lưu</span>
+          </div>
+        </div>
+
+        <button id="clearData" class="btn-secondary">
+          Xóa toàn bộ dữ liệu
+        </button>
+        <button id="viewData" class="btn-secondary" style="margin-top: 10px; border-color: var(--primary); color: var(--primary);">
+          Xem & Quản lý dữ liệu
+        </button>
+        <button id="fillFake" class="btn-primary" style="margin-top: 10px; width: 100%;">
+          Fake Data
+        </button>
+      </main>
+
+      <footer>
+        <p>Black Candy 🍫</p>
+      </footer>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
